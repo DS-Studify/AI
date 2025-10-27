@@ -67,17 +67,15 @@ https://github.com/user-attachments/assets/bd7d650b-9c57-4ec6-ac7f-7972262d6e04
 |nfocus_lean_side|한쪽 팔이나 손으로 몸을 지지하여 목과 어깨가 한쪽으로 휜 비대칭 자세|.|
 |sleep_head_back|상체가 후방으로 기운 상태에서 목의 관절각이 180도를 넘어 머리가 의자 뒤로 넘어간 자세|.|
 |sleep_head_down|머리를 숙여 얼굴이 화면에 보이지 않아 공부 여부를 판별할 수 없는 자세|.|
-<br />
 
-###Feature 구성
+### Feature 구성
 |Feature|개수|설명|
 |------|---|---|
 |Pose 절대 좌표|36|12개 랜드마크 * 3축|
 |face 절대 좌표|15|5개 랜드마크 * 3축|
 |합계|51|17개 랜드마크 * 3축, 최종 입력 feature vector|
-<br />
 
-###모델 구조
+### 모델 구조
 |제목|설명|
 |------|---|
 |입력층|상체 및 얼굴 주요 특징점 좌표 기준으로 구성된 51차원 피처 입력|
@@ -85,7 +83,6 @@ https://github.com/user-attachments/assets/bd7d650b-9c57-4ec6-ac7f-7972262d6e04
 |은닉층2|64개 뉴런, ReLU 활성화 함수 적용, Batch Normalization 및 Dropout(0.3)|
 |은닉층3|32개 뉴런, ReLU 활성화 함수 적용, Batch Normalization 및 Dropout(0.3)|
 |출력층|1개 뉴런(softmax 함수)로 다중 클래스 분류 수행|
-<br />
 
 ### 통합 상태
 
